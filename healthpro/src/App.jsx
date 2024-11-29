@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<IVFCalculator />} />
 
         {/* Another route for Success Rate */}
-        <Route path="/success-rate" element={<SuccessRate />} />
+        <Route path="/result" element={<SuccessRate />} />
       </Routes>
     </Router>
   );

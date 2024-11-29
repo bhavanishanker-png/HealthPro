@@ -206,17 +206,20 @@ function IVFCalculator() {
 
                     {/* Calculate Button */}
                     <div className="mt-8 text-center">
-                        <button
-                            onClick={() => navigate(`/result?rate=${calculateSuccessRate()}`)}
-                            className="bg-orange-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-orange-700 focus:outline-none focus:ring-4 focus:ring-orange-300 transition-colors"
-                        >
-                            Calculate
-                        </button>
+                        <div className="mt-8 text-center">
+                            <button
+                                onClick={() => navigate(`/result?rate=${calculateSuccessRate()}`)}
+                                className="bg-orange-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-orange-700 focus:outline-none focus:ring-4 focus:ring-orange-300 transition-colors"
+                            >
+                                Calculate
+                            </button>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            </div>
-            );
+        </div>
+    );
 }
 
-            export default IVFCalculator;
+export default IVFCalculator;
