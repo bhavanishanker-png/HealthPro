@@ -1,76 +1,47 @@
-import React, { useState } from 'react';
-
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+import { Link } from "react-router-dom";
+import logo from "../assets/ivf-pulse-logo.png";
+import { useState } from "react";
+import Hamburger from "hamburger-react";
+function Header() {
+  const [isOpen, setOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md py-4 px-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold">
-          <a href="/" className="text-black">
-            IVF <span className="text-red-500">Pulse</span>
-          </a>
+    <>
+      <div className="flex justify-between items-center p-5">
+        <div>
+          <img src={logo} alt="IVF Pulse Logo" />
         </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 items-center">
-          <a href="#" className="text-gray-600 hover:text-black">Donor Programme</a>
-          <a href="#" className="text-gray-600 hover:text-black">Fertility Preservation</a>
-          <a href="#" className="text-gray-600 hover:text-black">Advanced Treatments</a>
-          <a href="#" className="text-gray-600 hover:text-black">Infertility Treatments</a>
-          <a href="#" className="text-gray-600 hover:text-black">IVF Testing</a>
-          <a href="#" className="text-gray-600 hover:text-black">About Us</a>
-          <button className="bg-red-500 text-white px-6 py-3 rounded-md">
-            Talk to Us
+        <div className="hidden md:flex gap-8 items-center">
+          <Link className="text-lg hover:text-orange-600">Donor Programme</Link>
+          <Link className="text-lg hover:text-orange-600">Fertility Preservation</Link>
+          <Link className="text-lg hover:text-orange-600">Advanced Treatments</Link>
+          <Link className="text-lg hover:text-orange-600">Infertility Treatments</Link>
+          <Link className="text-lg hover:text-orange-600">IVF Testing</Link>
+          <Link className="text-lg hover:text-orange-600">About Us</Link>
+          <button className="bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700">
+            Talk to Us <span className="ml-2">→</span>
           </button>
         </div>
-        
-        {/* Mobile Menu */}
-        <div className="md:hidden flex items-center space-x-4">
-          <button
-            onClick={toggleMenu}
-            className="text-gray-600 hover:text-black focus:outline-none"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+        <div className="md:hidden">
+          <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
-      {isMenuOpen && (
-        <div className="md:hidden flex flex-col items-center space-y-4 mt-4">
-          <a href="#" className="text-gray-600 hover:text-black">Donor Programme</a>
-          <a href="#" className="text-gray-600 hover:text-black">Fertility Preservation</a>
-          <a href="#" className="text-gray-600 hover:text-black">Advanced Treatments</a>
-          <a href="#" className="text-gray-600 hover:text-black">Infertility Treatments</a>
-          <a href="#" className="text-gray-600 hover:text-black">IVF Testing</a>
-          <a href="#" className="text-gray-600 hover:text-black">About Us</a>
-
-          {/* Talk to Us Button */}
-          <button className="bg-red-500 text-white px-6 py-3 rounded-md mt-4 w-11/12 sm:w-full">
+      {isOpen && (
+        <div className="flex flex-col items-center gap-3 bg-white p-5 md:hidden">
+          <Link className="text-lg hover:text-orange-600">Donor Programme</Link>
+          <Link className="text-lg hover:text-orange-600">Fertility Preservation</Link>
+          <Link className="text-lg hover:text-orange-600">Advanced Treatments</Link>
+          <Link className="text-lg hover:text-orange-600">Infertility Treatments</Link>
+          <Link className="text-lg hover:text-orange-600">IVF Testing</Link>
+          <Link className="text-lg hover:text-orange-600">About Us</Link>
+          <button className="bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700">
             Talk to Us
           </button>
         </div>
       )}
-    </nav>
+    </>
   );
-};
+}
 
-export default Navbar;
+export default Header;
