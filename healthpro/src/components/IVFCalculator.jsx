@@ -36,8 +36,8 @@ function IVFCalculator() {
         setCycles(e.target.value);
     };
 
-    const handleICSIChange = () => {
-        setHasICSI(!hasICSI);
+    const handleICSIChange = (e) => {
+        setHasICSI(e.target.value === "yes");
     };
 
     const handlePGTChange = () => {
@@ -129,10 +129,10 @@ function IVFCalculator() {
                                 <input
                                     type="radio"
                                     name="icsi"
-                                    value="yes"
-                                    checked={hasICSI === true}
+                                    value="no"
+                                    checked={hasICSI === false}
                                     onChange={handleICSIChange}
-                                    className="hidden peer" // Hide the default radio button
+                                    className="hidden peer"
                                 />
                                 <div className="w-5 h-5 border-2 border-gray-400 rounded-full flex items-center justify-center peer-checked:border-orange-600 peer-checked:bg-orange-600 transition-all">
                                     <div className="w-2.5 h-2.5 bg-white rounded-full peer-checked:bg-white"></div>
@@ -140,16 +140,17 @@ function IVFCalculator() {
                                 <span className="text-lg text-gray-700 peer-checked:text-orange-600 transition-colors">No</span>
                             </label>
                         </div>
+
                         <div className="flex items-center">
                             <h3 className="mr-4 text-lg">PGT Testing:</h3>
                             <label className="flex items-center space-x-3 cursor-pointer">
                                 <input
                                     type="radio"
-                                    name="icsi"
+                                    name="pgtTesting" // Unique name
                                     value="yes"
-                                    checked={hasICSI === true}
-                                    onChange={handleICSIChange}
-                                    className="hidden peer" // Hide the default radio button
+                                    checked={hasPGT === true}
+                                    onChange={handlePGTChange}
+                                    className="hidden peer"
                                 />
                                 <div className="w-5 h-5 border-2 border-gray-400 rounded-full flex items-center justify-center peer-checked:border-orange-600 peer-checked:bg-orange-600 transition-all">
                                     <div className="w-2.5 h-2.5 bg-white rounded-full peer-checked:bg-white"></div>
@@ -160,11 +161,11 @@ function IVFCalculator() {
                             <label className="flex items-center space-x-3 cursor-pointer">
                                 <input
                                     type="radio"
-                                    name="icsi"
-                                    value="yes"
-                                    checked={hasICSI === true}
-                                    onChange={handleICSIChange}
-                                    className="hidden peer" // Hide the default radio button
+                                    name="pgtTesting" // Unique name
+                                    value="no"
+                                    checked={hasPGT === false}
+                                    onChange={handlePGTChange}
+                                    className="hidden peer"
                                 />
                                 <div className="w-5 h-5 border-2 border-gray-400 rounded-full flex items-center justify-center peer-checked:border-orange-600 peer-checked:bg-orange-600 transition-all">
                                     <div className="w-2.5 h-2.5 bg-white rounded-full peer-checked:bg-white"></div>
