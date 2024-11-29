@@ -77,7 +77,7 @@ const SuccessRate = () => {
                 </div>
                 <button
                     onClick={() => navigate('/')}
-                    className="mb-8 px-6 py-2 bg-coral-red text-white rounded hover:bg-red-600 transition-colors"
+                    className="mb-8 px-6 py-2 bg-coral-red text-white rounded transition-colors"
                 >
                     Go Back
                 </button>
