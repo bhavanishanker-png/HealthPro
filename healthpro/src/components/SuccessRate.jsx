@@ -41,7 +41,7 @@ const SuccessRate = () => {
         <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
             <div className="container mx-auto px-4 py-4 h-[calc(100vh-80px)] flex flex-col">
                 <div className="flex flex-col lg:flex-row items-center justify-between flex-grow">
-                    <div className="w-full lg:w-1/2">
+                    <div className="w-full lg:w-1/2 flex-row lg:flex-row items-center justify-between">
                         <div className="flex items-center">
                             <div className="w-4 h-4 rounded-full bg-coral-red mr-3"></div>
                             <h1 className="text-white text-4xl font-light">
