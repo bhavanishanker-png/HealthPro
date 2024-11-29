@@ -38,7 +38,7 @@ const SuccessRate = () => {
             <div className="container mx-auto px-4 py-4 h-[calc(100vh-80px)] flex flex-col">
                 
                 <div className="flex flex-col lg:flex-row items-center justify-between flex-grow">
-                    <div className="w-full lg:w-1/3 flex-row lg:flex-row items-center justify-between">
+                    <div className="w-full lg:w-1/2 flex-row lg:flex-row items-center justify-between">
                         <div className="flex items-center">
                             <div className="w-4 h-4 rounded-full bg-coral-red mr-3"></div>
                             <h1 className="text-white text-4xl font-light">
@@ -59,7 +59,7 @@ const SuccessRate = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full lg:w-1/2 mt-4 lg:mt-0 relative">
+                    <div className="w-full lg:w-2/3 mt-4 lg:mt-0 relative">
                         <div className="absolute inset-0 bg-green-300/15 blur-3xl rounded-lg"></div>
                         <img
                             src="https://s3-alpha-sig.figma.com/img/3083/cfdf/a3342bdeb14d22fce3f84a7131648fe0?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=m3rcPSzyYXFQ3av1UzjVwX~ywz9ut1Jmpzmx6Z~RWwUd~~r9UxNnyNl4R9JldCD4zDCW7Q2IeQvOvnDs6u4pyH3CTfoUnO5v492UL1iuyJt3I3zHG387QUApgjGytHwEVS51em2fW5HQXigaiOLgI6ldEf-XgFWD-AZPB6squ7fJ1sPU5SEgs04SJJgSlkJzl1Ka-Ed1OsDBqFXjBxAf7zZ~60XEh1fn~sDWw58OaB~z-10gRcakHkeVapNSDVELmye3t0JjF7zlsu5d9JV7LvBxi6ry6D-l1bYi0r8uWHVFccwd~tuvdXccvuZZNeoqnR6oiSRnQkxLHAzIzIkmVQ__"
